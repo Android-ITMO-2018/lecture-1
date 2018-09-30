@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -36,27 +35,14 @@ public class MainActivity extends AppCompatActivity {
         inc = findViewById(R.id.inc);
         dec = findViewById(R.id.dec);
 
-        result.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inc.setText(name.getText());
-                dec.setText(age.getText());
-            }
+        result.setOnClickListener(v -> {
+            inc.setText(name.getText());
+            dec.setText(age.getText());
         });
 
-        inc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                result.setText(Integer.toString(++cnt));
-            }
-        });
+        inc.setOnClickListener(v -> result.setText(Integer.toString(++cnt)));
 
-        dec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                result.setText(Integer.toString(--cnt));
-            }
-        });
+        dec.setOnClickListener(v -> result.setText(Integer.toString(--cnt)));
 
 
         if (savedInstanceState != null) {

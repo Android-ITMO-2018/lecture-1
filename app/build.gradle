@@ -16,18 +16,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // Это позволит вам использовать Java 8
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_6
-        targetCompatibility JavaVersion.VERSION_1_6
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 
 }
 
 dependencies {
-    // Опционально
-    //  annotationProcessor 'org.projectlombok:lombok:1.18.2'
-    //  compileOnly 'org.projectlombok:lombok:1.18.2'
+    // Опционально, c 1.18.0 desugar (Java 7-8) не работает, поэтому 1.16.20
+//    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+//    compileOnly 'org.projectlombok:lombok:1.16.20'
 
     // Это позволит вам подключать jar-файлы из папки libs
     implementation fileTree(include: ['*.jar'], dir: 'libs')
