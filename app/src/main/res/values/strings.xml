@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SampleApp</string>
+    <string name="don_t_tap_me">don\'t tap me!</string>
 </resources>
