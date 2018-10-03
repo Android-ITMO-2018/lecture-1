@@ -9,41 +9,10 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="64sp"
-        android:text="Hello World!" />
-
-    <TextView
-        android:id="@+id/inc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:text="don't tap me!" />
-
-    <TextView
-        android:id="@+id/dec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:text="mee too!" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recycler"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
