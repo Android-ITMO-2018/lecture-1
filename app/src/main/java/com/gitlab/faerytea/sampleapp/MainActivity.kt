@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         result.setOnClickListener {
             inc.text = name.text
             dec.text = age.text
+
+            val user = User(age.text.toString().toInt(), name.text.toString())
+            val intent = createUserIntent(user)
+            startActivity(intent)
         }
 
         inc.setOnClickListener { result.text = (++cnt).toString() }
